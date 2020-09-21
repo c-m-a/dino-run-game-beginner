@@ -23,16 +23,23 @@ body {
 }
 
 .game {
+  margin: 0 auto;
   position: relative;
   top: 20%;
-  width: 100%;
+  width: 90%;
   height: 20rem;
+}
+
+.ground {
+  position: absolute;
+  bottom: 1rem;
   border-bottom: .2rem solid lightgray;
+  width: 100%;
+  z-index: -1;
 }
 
 .dino {
   position: absolute;
-  left: 5rem;
   width: 2rem;
   height: 5rem;
   background-color: red;
@@ -40,7 +47,7 @@ body {
 }
 
 .animate-jump {
-  animation: jump 800ms linear;
+  animation: jump 800ms;
 }
 
 .captus {
@@ -50,7 +57,7 @@ body {
   background-color: green;
   bottom: 0;
   right: 0;
-  animation: captus 2s infinite linear;
+  animation: move-x 2.5s infinite linear;
 }
 
 @keyframes jump {
@@ -60,7 +67,7 @@ body {
   100%{top: 15rem;}
 }
 
-@keyframes captus {
+@keyframes move-x {
   0%{left: 100vw;}
-  100%{left: -4rem;}
+  100%{left: -10rem;}
 }

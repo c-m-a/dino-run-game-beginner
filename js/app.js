@@ -10,7 +10,9 @@ const checkDead = setInterval(() => {
     .getComputedStyle(captus)
     .getPropertyValue('left'));
 
-  if (captusLeft > 0 && captusLeft < 20 && dinoTop > 120) {
+  const isInDinoZone = captusLeft > 0 && captusLeft < 20 && dinoTop > 120;
+
+  if (isInDinoZone) {
     captus.style.animation = 'none';
     captus.style.display = 'none';
     alert('Game over');

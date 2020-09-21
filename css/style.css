@@ -39,6 +39,10 @@ body {
   bottom: 0;
 }
 
+.animate-jump {
+  animation: jump 800ms linear;
+}
+
 .captus {
   position: absolute;
   width: 2rem;
@@ -46,4 +50,17 @@ body {
   background-color: green;
   bottom: 0;
   right: 0;
+  animation: captus 2s infinite linear;
+}
+
+@keyframes jump {
+  0%{top: 15rem;}
+  30%{top: 10rem;}
+  70%{top: 10rem;}
+  100%{top: 15rem;}
+}
+
+@keyframes captus {
+  0%{left: 100vw;}
+  100%{left: -4rem;}
 }
